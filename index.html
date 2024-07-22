@@ -2,32 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lib/chessboardjs/css/chessboard-0.3.0.css">
-    <link rel="stylesheet" href="style.css">
     <title>ChessBot</title>
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="ChessBot" />
-    <meta property="og:description" content="Play against a challenging AI chess opponent right in your browser!" />
-    <meta property="og:image" content="https://e7.pngegg.com/pngimages/18/107/png-clipart-chess-piece-chessboard-pawn-hand-painted-chess-watercolor-painting-game-thumbnail.png" />
-    <meta property="og:url" content="https://maddoxx099.github.io/Chess-bot/" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Optional Twitter Meta Tags for better integration with Twitter -->
-    <meta name="twitter:title" content="ChessBot">
-    <meta name="twitter:description" content="Play against a challenging AI chess opponent right in your browser!">
-    <meta name="twitter:image" content="https://e7.pngegg.com/pngimages/18/107/png-clipart-chess-piece-chessboard-pawn-hand-painted-chess-watercolor-painting-game-thumbnail.png">
-
+    <link rel="stylesheet" href="lib/chessboardjs/css/chessboard-0.3.0.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark-mode">
     <div class="container">
         <h1>ChessBot</h1>
-        <button id="toggle-mode">Toggle Light/Dark Mode</button>
-        <div class="main-content">
-            <div id="board" class="board"></div>
-            <div id="move-history" class="move-history"></div>
-        </div>
+        <button id="toggle-mode">Switch to Light Mode</button>
+        <div id="board" class="board"></div>
         <div class="info">
             <div class="settings">
                 <label for="search-depth">Search depth:</label>
@@ -35,20 +19,33 @@
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
             </div>
             <div class="stats">
-                <span>Positions evaluated: <span id="position-count"></span></span>
-                <br>
-                <span>Time: <span id="time"></span></span>
-                <br>
-                <span>Positions/s: <span id="positions-per-s"></span></span>
+                <span>Positions evaluated: <span id="position-count">0</span></span>
+                <span>Time: <span id="time">0s</span></span>
+                <span>Positions/s: <span id="positions-per-s">0</span> </span>
             </div>
+            <div id="move-history" class="move-history"></div>
         </div>
     </div>
     <script src="lib/jquery/jquery-3.2.1.min.js"></script>
     <script src="lib/chessboardjs/js/chess.js"></script>
     <script src="lib/chessboardjs/js/chessboard-0.3.0.js"></script>
     <script src="script.js"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-mode');
+        const body = document.body;
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Switch to Light Mode';
+            } else {
+                toggleButton.textContent = 'Switch to Dark Mode';
+            }
+        }); 
+    </script>
 </body>
 </html>
