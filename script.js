@@ -293,78 +293,78 @@ var cfg = {
 };
 board = ChessBoard('board', cfg);
 
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     const boardElement = document.getElementById('board');
+document.addEventListener('DOMContentLoaded', (event) => {
+    const boardElement = document.getElementById('board');
 
-//     boardElement.addEventListener('touchstart', function (e) {
-//         e.preventDefault();
-//         var touch = e.touches[0];
-//         var simulatedEvent = new MouseEvent('mousedown', {
-//             bubbles: true,
-//             cancelable: true,
-//             view: window,
-//             detail: 1,
-//             screenX: touch.screenX,
-//             screenY: touch.screenY,
-//             clientX: touch.clientX,
-//             clientY: touch.clientY,
-//             ctrlKey: false,
-//             altKey: false,
-//             shiftKey: false,
-//             metaKey: false,
-//             button: 0,
-//             buttons: 1,
-//             relatedTarget: null
-//         });
+    boardElement.addEventListener('touchstart', function (e) {
+        e.preventDefault();
+        var touch = e.touches[0];
+        var simulatedEvent = new MouseEvent('mousedown', {
+            bubbles: true,
+            cancelable: true,
+            view: window,
+            detail: 1,
+            screenX: touch.screenX,
+            screenY: touch.screenY,
+            clientX: touch.clientX,
+            clientY: touch.clientY,
+            ctrlKey: false,
+            altKey: false,
+            shiftKey: false,
+            metaKey: false,
+            button: 0,
+            buttons: 1,
+            relatedTarget: null
+        });
 
-//         touch.target.dispatchEvent(simulatedEvent);
-//     }, false);
+        touch.target.dispatchEvent(simulatedEvent);
+    }, false);
 
-//     boardElement.addEventListener('touchend', function (e) {
-//         e.preventDefault();
-//         var touch = e.changedTouches[0];
-//         var simulatedEvent = new MouseEvent('mouseup', {
-//             bubbles: true,
-//             cancelable: true,
-//             view: window,
-//             detail: 1,
-//             screenX: touch.screenX,
-//             screenY: touch.screenY,
-//             clientX: touch.clientX,
-//             clientY: touch.clientY,
-//             ctrlKey: false,
-//             altKey: false,
-//             shiftKey: false,
-//             metaKey: false,
-//             button: 0,
-//             buttons: 1,
-//             relatedTarget: null
-//         });
+    boardElement.addEventListener('touchend', function (e) {
+        e.preventDefault();
+        var touch = e.changedTouches[0];
+        var simulatedEvent = new MouseEvent('mouseup', {
+            bubbles: true,
+            cancelable: true,
+            view: window,
+            detail: 1,
+            screenX: touch.screenX,
+            screenY: touch.screenY,
+            clientX: touch.clientX,
+            clientY: touch.clientY,
+            ctrlKey: false,
+            altKey: false,
+            shiftKey: false,
+            metaKey: false,
+            button: 0,
+            buttons: 1,
+            relatedTarget: null
+        });
 
-//         touch.target.dispatchEvent(simulatedEvent);
-//     }, false);
+        touch.target.dispatchEvent(simulatedEvent);
+    }, false);
 
-//     boardElement.addEventListener('touchmove', function (e) {
-//         e.preventDefault();
-//         var touch = e.touches[0];
-//         var simulatedEvent = new MouseEvent('mousemove', {
-//             bubbles: true,
-//             cancelable: true,
-//             view: window,
-//             detail: 1,
-//             screenX: touch.screenX,
-//             screenY: touch.screenY,
-//             clientX: touch.clientX,
-//             clientY: touch.clientY,
-//             ctrlKey: false,
-//             altKey: false,
-//             shiftKey: false,
-//             metaKey: false,
-//             button: 0,
-//             buttons: 1,
-//             relatedTarget: null
-//         });
+    boardElement.addEventListener('touchmove', function (e) {
+        e.preventDefault();
+        var touch = e.touches[0];
+        var simulatedEvent = new MouseEvent('mousemove', {
+            bubbles: true,
+            cancelable: true,
+            view: window,
+            detail: 1,
+            screenX: touch.screenX,
+            screenY: touch.screenY,
+            clientX: touch.clientX,
+            clientY: touch.clientY,
+            ctrlKey: false,
+            altKey: false,
+            shiftKey: false,
+            metaKey: false,
+            button: 0,
+            buttons: 1,
+            relatedTarget: null
+        });
 
-//         touch.target.dispatchEvent(simulatedEvent);
-//     }, false);
-// });
+        touch.target.dispatchEvent(simulatedEvent);
+    }, false);
+});
