@@ -2,6 +2,8 @@
 
 ChessBot is a web-based chess application where users can play against an AI opponent. The AI utilizes several algorithms to generate moves and evaluate board positions, providing a challenging experience for players of all skill levels.
 
+To use it live use this link - https://maddoxx099.github.io/Chess-bot/
+
 ## Technologies Used
 
 1. **Move Generation and Board Visualization**: We use the `chess.js` library for move generation and the `chessboard.js` library for visualizing the board. The `chess.js` library implements all the rules of chess, allowing us to calculate all legal moves for a given board state.
