@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChessBot</title>
+    <link rel="stylesheet" href="lib/chessboardjs/css/chessboard-0.3.0.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <h1>ChessBot</h1>
+        <button id="toggle-mode">Switch to Light Mode</button>
+        <div id="board" class="board"></div>
+        <div class="info">
+            <div class="settings">
+                <label for="search-depth">Search depth:</label>
+                <select id="search-depth">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="stats">
+                <span>Positions evaluated: <span id="position-count">0</span></span>
+                <span>Time: <span id="time">0s</span></span>
+                <span>Positions/s: <span id="positions-per-s">0</span> </span>
+            </div>
+            <div id="move-history" class="move-history"></div>
+        </div>
+    </div>
+    <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="lib/chessboardjs/js/chess.js"></script>
+    <script src="lib/chessboardjs/js/chessboard-0.3.0.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-mode');
+        const body = document.body;
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Switch to Light Mode';
+            } else {
+                toggleButton.textContent = 'Switch to Dark Mode';
+            }
+        }); 
+    </script>
+</body>
+</html>
